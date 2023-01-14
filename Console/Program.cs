@@ -1,6 +1,9 @@
-﻿ProductManager productManager = new ProductManager(new InMemoryProductDal());
-foreach (var car in productManager.GetAll())
+﻿using Business.Concrete;
+using DataAccess.Concrete.InMemory;
+
+CarManager carManager = new CarManager(new InMemoryCarDal());
+foreach (var car in carManager.GetAll())
 {
-    Console.WriteLine(product.ProductName);
+    Console.WriteLine(car.ColorId);
 
 }
