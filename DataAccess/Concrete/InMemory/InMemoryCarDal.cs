@@ -59,5 +59,10 @@ namespace DataAccess.Concrete.InMemory
             CarToUpdate.ColorId = car.ColorId;
             CarToUpdate.BrandId = car.BrandId;
         }
+
+        public List<Car> GetByModelYear(int ModelYear)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
