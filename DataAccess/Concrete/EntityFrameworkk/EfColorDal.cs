@@ -11,5 +11,6 @@ namespace DataAccess.Concrete.EntityFrameworkk
 {
     public class EfColorDal:EfEntityRepositoryBase<Color,ReCapContext>,IColorDal
     {
+
     }
 }
