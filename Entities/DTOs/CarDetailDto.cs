@@ -9,10 +9,11 @@ namespace Entities.DTOs
 {
     public class CarDetailDto:IDto
     {
-        public int CarName { get; set; }
-        public int CategoryId { get; set; }
-        public int Cate { get; set; }
-        public int MyProperty { get; set; }
+        public int CarID { get; set; }
+        public string CarName { get; set; }
+        public string BrandName { get; set; }
+        public string ColorName { get; set; }
+        public int DailyPrice { get; set; }
 
     }
 }

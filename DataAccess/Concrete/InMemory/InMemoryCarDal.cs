@@ -1,5 +1,6 @@
 ﻿using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -17,11 +18,11 @@ namespace DataAccess.Concrete.InMemory
         {
             _cars = new List<Car>()
             {
-                new Car{Id=1, BrandId=1, ColorId=1, DailyPrice=150, Description="BMW", ModelYear=2013 },
-                new Car{Id=2, BrandId=2, ColorId=2, DailyPrice=110, Description="Mercedes", ModelYear=2015 },
-                new Car{Id=3, BrandId=3, ColorId=3, DailyPrice=120, Description="Mustang", ModelYear=2014 },
-                new Car{Id=4, BrandId=4, ColorId=4, DailyPrice=320, Description="RangeRover", ModelYear=2022 },
-                new Car{Id=5, BrandId=5, ColorId=5, DailyPrice=65, Description="Elantra", ModelYear=2022 },
+                new Car{Id=1, BrandId=1, ColorId=1, DailyPrice=150, CarName="BMW", ModelYear=2013 },
+                new Car{Id=2, BrandId=2, ColorId=2, DailyPrice=110, CarName="Mercedes", ModelYear=2015 },
+                new Car{Id=3, BrandId=3, ColorId=3, DailyPrice=120, CarName="Mustang", ModelYear=2014 },
+                new Car{Id=4, BrandId=4, ColorId=4, DailyPrice=320, CarName="RangeRover", ModelYear=2022 },
+                new Car{Id=5, BrandId=5, ColorId=5, DailyPrice=65, CarName="Elantra", ModelYear=2022 },
 
 
 
@@ -55,7 +56,7 @@ namespace DataAccess.Concrete.InMemory
         {
             Car CarToUpdate = _cars.SingleOrDefault(c => c.Id == car.Id);
             CarToUpdate.DailyPrice = car.DailyPrice;
-            CarToUpdate.Description = car.Description;
+            CarToUpdate.CarName = car.CarName;
             CarToUpdate.ModelYear = car.ModelYear;
             CarToUpdate.ColorId = car.ColorId;
             CarToUpdate.BrandId = car.BrandId;
@@ -72,6 +73,11 @@ namespace DataAccess.Concrete.InMemory
         }
 
         public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<CarDetailDto> GetCarDetails()
         {
             throw new NotImplementedException();
         }
