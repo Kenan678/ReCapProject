@@ -18,13 +18,15 @@ namespace Business.Concrete
         {
             _carDal = carDal;
         }
-        public void Add(Car car)
+        public void IResult Add(Car car)
         {
             if (car.CarName.Length >= 2 && car.DailyPrice >= 0)
             {
-                _carDal.Add(car);
-                Console.WriteLine("New Car Added succesfuly");
+                return new ErrorResult(messages);
+              
             }
+            _carDal.Add(car);
+            return new; 
         }
         public void Delete(Car car)
         {
