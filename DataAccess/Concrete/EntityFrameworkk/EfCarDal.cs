@@ -11,7 +11,11 @@ using System.Threading.Tasks;
 namespace DataAccess.Concrete.EntityFrameworkk
 {
     public class EfCarDal : EfEntityRepositoryBase<Car, ReCapContext>, ICarDal
-  {
+    {
+        public List<CarDetailDto> GetCarDetails()
+        {
+            throw new NotImplementedException();
+        }
         /*public List<CarDetailDto> GetCarDetails()
            {
                using (ReCapContext context = new ReCapContext)
@@ -32,7 +36,8 @@ namespace DataAccess.Concrete.EntityFrameworkk
        
 
     */
+
     }
 
-    
+
 }
